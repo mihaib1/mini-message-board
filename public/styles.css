@@ -11,3 +11,17 @@
 .btn{
     margin: 8px;
 }
+
+.date-sent{
+    font-size: small;
+    padding: 1rem;
+}
+
+.message{
+    font-size:x-large;
+    margin: 2rem;
+}
+
+li{
+    padding:0.5rem;
+}
