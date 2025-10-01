@@ -1,0 +1,13 @@
+.form-container{
+    width: 20rem;
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.btn{
+    margin: 8px;
+}
