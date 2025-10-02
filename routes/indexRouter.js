@@ -27,7 +27,6 @@ indexRouter.post("/new", (req, res) => {
         added: new Date(),
         id: messages.length + 1
     }
-    console.log(newEntry);
     messages.push(newEntry);
     res.redirect("/");
 })
