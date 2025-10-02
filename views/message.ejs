@@ -3,6 +3,7 @@
 <li>
     <div>
         <span class="message"> <b>  <%= message.user %>: </b>  <%= message.text %>  </span>
+        <button onclick="location.href='/messageDetails/<%= message.id %>'">Open Message</button>
     </div>
     <span class="date-sent"> <%= message.added %> </span>
 </li>

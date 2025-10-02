@@ -5,12 +5,14 @@ let messages = [
     {
         text: "Hi there!",
         user: "Amando",
-        added: new Date()
+        added: new Date(),
+        id: 1
     },
     {
         text: "Hello World!",
         user: "Charles",
-        added: new Date()
+        added: new Date(),
+        id: 2
     }
 ];
 
@@ -19,14 +21,20 @@ indexRouter.get("/", (req, res) => {
 });
 
 indexRouter.post("/new", (req, res) => {
-    console.log(req.body);
     const newEntry = {
         text: req.body.message,
         user: req.body.user,
-        added: new Date()
+        added: new Date(),
+        id: messages.length + 1
     }
+    console.log(newEntry);
     messages.push(newEntry);
     res.redirect("/");
+})
+
+indexRouter.get("/messageDetails/:id", (req, res) => {
+    let message = messages.find((message) => message.id == req.params.id)
+    res.render("messageDetails", {message: message});
 })
 
 module.exports = indexRouter
